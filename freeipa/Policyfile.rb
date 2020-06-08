@@ -10,7 +10,8 @@ name 'freeipa'
 default_source :supermarket
 
 # run_list: chef-client will run these recipes in the order specified.
-run_list 'freeipa::default'
+run_list 'freeipa::install_server'
 
 # Specify a custom source for a single cookbook:
 cookbook 'freeipa', path: '.'
+cookbook 'hostsfile'
